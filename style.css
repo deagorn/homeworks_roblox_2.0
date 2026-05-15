@@ -1,0 +1,1494 @@
+/* Базові налаштування */
+/* ==========================================================================
+   ОСНОВНІ ЗМІННІ ТЕМИ (Темна геймерська тема)
+   ========================================================================== */
+:root {
+  /* Кольори фону */
+  --bg-app: #0f172a; /* Найтемніший синій (фон всього екрану) */
+  --bg-sidebar: #1e293b; /* Трохи світліший для бокової панелі */
+  --bg-card: #1e293b; /* Основний фон контенту */
+  --bg-card-inner: #334155; /* Фон для внутрішніх блоків */
+
+  /* Текст */
+  --text-main: #f8fafc; /* Білий/світло-сірий для основного тексту */
+  --text-muted: #94a3b8; /* Сірий для другорядного тексту */
+
+  /* Акценти (в стилі Roblox Studio) */
+  --accent-blue: #3b82f6; /* Яскравий синій */
+  --accent-blue-hover: #60a5fa;
+  --accent-orange: #f59e0b; /* Помаранчевий/золотий */
+  --accent-green: #10b981; /* Зелений для успіху */
+  --accent-red: #ef4444; /* Червоний для помилок/закритого */
+
+  /* Інше */
+  --border-radius: 12px;
+  --glow-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+/* ==========================================================================
+   ГОЛОВНИЙ КОНТЕНТ
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Банер привітання */
+.welcome-banner {
+  background: linear-gradient(to right, rgba(59, 130, 246, 0.1), transparent);
+  border-left: 4px solid var(--accent-blue);
+  padding: 25px 30px;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  margin-bottom: 40px;
+}
+
+.welcome-banner h1 {
+  margin-top: 0;
+  color: var(--text-main);
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.intro-text {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Заголовок завдання з іконкою */
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.task-icon-wrapper {
+  background-color: var(--accent-blue);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: var(--glow-shadow);
+}
+
+.task-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.task-description {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Картка з інструкціями (Список кроків) */
+.instructions-card {
+  background-color: var(--bg-card-inner);
+  border-radius: var(--border-radius);
+  padding: 25px 30px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.instructions-card h3 {
+  margin-top: 0;
+  color: var(--accent-orange);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.custom-list li {
+  margin-bottom: 12px;
+  color: var(--text-main);
+  font-size: 16px;
+}
+.custom-list li:last-child {
+  margin-bottom: 0;
+}
+.custom-list strong {
+  color: var(--accent-blue);
+}
+
+/* ==========================================================================
+   IFRAME ТА ДЕКОР (Стилізація під браузер)
+   ========================================================================== */
+/* ==========================================================================
+   IFRAME ТА ДЕКОР (Стилізація під браузер)
+   ========================================================================== */
+.iframe-browser-mockup {
+  background-color: #0f172a;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #334155;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.browser-bar {
+  background-color: #1e293b;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #334155;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background-color: #ef4444;
+}
+.dot.yellow {
+  background-color: #f59e0b;
+}
+.dot.green {
+  background-color: #10b981;
+}
+
+.browser-url {
+  background-color: #0f172a;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 4px 15px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-family: monospace;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Пропорція 16:9 */
+  height: 0;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==========================================================================
+   РОЗПОДІЛЬНИК ТА МОТИВАЦІЯ
+   ========================================================================== */
+.glow-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(59, 130, 246, 0.5),
+    transparent
+  );
+  margin: 40px 0;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.motivation-panel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px dashed var(--accent-orange);
+  padding: 20px 25px;
+  border-radius: var(--border-radius);
+}
+
+.motivation-icon {
+  font-size: 40px;
+}
+
+.motivation-content h4 {
+  margin: 0 0 5px 0;
+  color: var(--accent-orange);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.motivation-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #1e1e24; /* Темний фон під Roblox Studio */
+  color: #ffffff;
+}
+
+/* Контейнер всього додатку */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Бокова панель */
+.sidebar {
+  width: 280px;
+  background-color: #2b2b36;
+  border-right: 4px solid #3a3a48;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 20px;
+  background-color: #ff3366; /* Яскравий акцент */
+  text-align: center;
+  border-bottom: 4px solid #cc0033;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.task-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-link {
+  text-decoration: none;
+  color: #b0b0c0;
+  padding: 6px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.task-link:hover {
+  background-color: #3a3a48;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* Активне посилання */
+.task-link.active {
+  background-color: #4facfe;
+  color: #ffffff;
+  border-color: #00f2fe;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+/* Головний контент */
+
+.content-box {
+  background-color: #2b2b36;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid #3a3a48;
+}
+
+.content-box h1 {
+  color: #4facfe;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.content-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #dcdcdc;
+  margin-bottom: 20px;
+}
+
+/* === ОВЕРЛЕЙ БЛОКУВАННЯ (Заглушка) === */
+.lock-overlay {
+  display: none; /* Сховано за замовчуванням */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 36, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-card {
+  background: linear-gradient(145deg, #2b2b36, #3a3a48);
+  padding: 50px 40px;
+  border-radius: 24px;
+  text-align: center;
+  border: 3px solid #ff3366;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lock-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  animation: shake 2s infinite ease-in-out;
+}
+
+.lock-card h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.lock-card p {
+  color: #b0b0c0;
+  font-size: 18px;
+}
+
+.lock-card strong {
+  color: #ff3366;
+  font-size: 22px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Анімації для дитячої живості */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+::-webkit-scrollbar-thumb {
+  background: #4facfe;
+  border-radius: 4px;
+}
+
+/* --- Стилі для сторінки завдань --- */
+
+/* Список кроків завдання */
+.task-steps {
+  margin: 15px 0 30px 25px;
+  color: #dcdcdc;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.task-steps li {
+  margin-bottom: 10px;
+}
+
+.task-steps li::marker {
+  color: #4facfe;
+  font-weight: bold;
+}
+
+/* Інформаційні блоки (дедлайн та телеграм) */
+.info-box {
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Блок дедлайну (жовтий/помаранчевий акцент) */
+.deadline-box {
+  background-color: rgba(255, 170, 0, 0.1);
+  border: 2px solid #ffaa00;
+  color: #ffd000;
+}
+
+/* Блок Telegram (синій акцент) */
+.telegram-box {
+  background-color: rgba(0, 136, 204, 0.1);
+  border: 2px solid #0088cc;
+  color: #e0f2fe;
+  margin-top: 30px;
+}
+
+.telegram-box strong {
+  color: #00aaff;
+  font-size: 20px;
+}
+
+.tg-icon {
+  font-size: 40px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+/*h1 */
+/* --- Нові стилі для Завдання 1 --- */
+
+/* Блок заборони (червоний акцент) */
+.warning-box {
+  background-color: rgba(255, 51, 102, 0.1);
+  border: 2px solid #ff3366;
+  color: #ffb3c6;
+}
+
+.warning-box strong {
+  color: #ff3366;
+  font-size: 20px;
+}
+
+.warning-box .icon {
+  font-size: 40px;
+}
+
+/* Блок зі стікером персонажа */
+.sticker-box {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #4facfe22, #00f2fe22);
+  border-radius: 20px;
+  padding: 15px 25px;
+  margin: 30px 0;
+  border: 2px dashed #4facfe;
+  gap: 20px;
+}
+
+.sticker-text {
+  font-size: 18px;
+  color: #e0f2fe;
+}
+
+.sticker-text strong {
+  color: #4facfe;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* CSS-малюнок персонажа (Дівчинка, темне каре, жовта футболка, синій комбінезон) */
+.character-sticker {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: #ffd166; /* Жовта футболка */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 3px solid #118ab2; /* Синій комбінезон (акцент) */
+  flex-shrink: 0;
+}
+
+.char-hair {
+  position: absolute;
+  top: -5px;
+  width: 76px;
+  height: 40px;
+  background-color: #2b2d42; /* Темне волосся */
+  border-radius: 40px 40px 10px 10px;
+  z-index: 1;
+}
+
+.char-face {
+  position: relative;
+  z-index: 2;
+  font-size: 30px;
+  margin-top: 10px;
+}
+/* === СЛАЙДЕР === */
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.slider-container {
+  width: 90%; /* Робимо широким, як дві старі картинки разом */
+  height: 220px; /* Залишаємо висоту майже незмінною */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a1a20; /* Темний фон під картинкою */
+  border: 3px solid transparent;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.slider-container:hover {
+  border-color: #4facfe;
+  box-shadow: 0 10px 20px rgba(79, 172, 254, 0.4);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ВАЖЛИВО: картинка більше НЕ обрізається, а повністю вписується! */
+  opacity: 0;
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 0.3s ease;
+  cursor: zoom-in; /* Курсор лупи для розуміння, що можна клікнути */
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide.active:hover {
+  transform: scale(1.02); /* Легкий зум при наведенні для анімації */
+}
+
+/* Кнопки під слайдером */
+.slider-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.slider-btn {
+  /* Яскравий градієнт замість нудного сірого фону */
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #ffffff;
+  border: none; /* Прибираємо стару рамку */
+  border-radius: 50%;
+  width: 20px; /* Робимо трохи більшими */
+  height: 20px;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Пружна анімація */
+  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3); /* М'яка тінь-світіння */
+  /* Робимо емодзі стрілок більш акуратними */
+  padding-bottom: 3px;
+  padding-right: 1px;
+}
+
+/* Ефект при наведенні */
+.slider-btn:hover {
+  transform: scale(1.15) rotate(-5deg); /* Кнопка збільшується і трохи нахиляється */
+  box-shadow: 0 10px 25px rgba(0, 242, 254, 0.6); /* Світіння стає яскравішим */
+  background: linear-gradient(
+    135deg,
+    #ff3366,
+    #ff5757
+  ); /* Зміна кольору на акцентний червоний при наведенні */
+}
+
+/* Ефект при натисканні */
+.slider-btn:active {
+  transform: scale(0.95);
+}
+
+/* === МОДАЛЬНЕ ВІКНО (LIGHTBOX) === */
+.lightbox {
+  display: none; /* Сховано за замовчуванням */
+  position: fixed;
+  z-index: 1000; /* Поверх усього */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Темний фон (бекдроп) */
+  backdrop-filter: blur(5px); /* Розмиття фону */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Клас для відкриття через JS */
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* Саме зображення в модалці */
+.lightbox-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  animation: zoomIn 0.3s ease;
+}
+
+/* Хрестик закриття */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #f1f1f1;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  color: #ff3366;
+}
+
+/* Анімація появи картинки */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Адаптивність для мобільних (картинки стануть одна під одною) */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery-img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* Блок дозволу Тулбоксу (Зелений акцент) */
+.toolbox-box {
+  background-color: rgba(0, 255, 136, 0.1);
+  border: 2px solid #00ff88;
+  color: #ccffee;
+  margin-bottom: 30px;
+}
+
+.toolbox-box strong {
+  color: #00ff88;
+  font-size: 20px;
+}
+
+.toolbox-box .icon {
+  font-size: 40px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* === ІНТЕРАКТИВНА ГРА (LEARNING APPS) === */
+.interactive-task {
+  background: linear-gradient(180deg, #2b2b36 0%, #1e1e24 100%);
+  border: 3px dashed #8a2be2; /* Фіолетовий акцент для гри */
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.interactive-task h3 {
+  color: #b070ff; /* Світло-фіолетовий */
+  margin-bottom: 10px;
+  font-size: 26px;
+  text-shadow: 0 2px 10px rgba(138, 43, 226, 0.4);
+}
+
+.interactive-task p {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+/* Обгортка для iframe */
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Висота, як ти й просив */
+  border-radius: 15px;
+  overflow: hidden; /* Важливо: обрізає гострі кути самого iframe */
+  border: 4px solid #3a3a48; /* Темна рамка під стиль Roblox Studio */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  background-color: #1a1a20; /* Фон, поки гра вантажиться */
+}
+
+/* Сам iframe */
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Прибираємо стандартну потворну рамку */
+}
+
+/* Адаптивність: на телефонах робимо гру трохи меншою по висоті */
+@media (max-width: 768px) {
+  .iframe-wrapper {
+    height: 400px;
+  }
+  .interactive-task {
+    padding: 20px;
+  }
+}
+
+/* Стилізація головного заголовка завдання */
+.task-title {
+  font-size: 22px;
+  color: #ffaa00; /* Яскравий жовто-помаранчевий акцент */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #3a3a48;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Стилі для підказок (спойлерів) --- */
+.hints-wrapper {
+  margin: 25px 0;
+  background-color: rgba(43, 43, 54, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px dashed #4facfe;
+}
+
+.hints-wrapper h4 {
+  color: #4facfe;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.hint-item {
+  margin-bottom: 10px;
+  background-color: #1e1e24;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #3a3a48;
+}
+
+/* Вигляд кнопки спойлера */
+.hint-item summary {
+  padding: 12px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #dcdcdc;
+  background-color: #3a3a48;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  list-style: none; /* Прибираємо стандартний трикутник браузера */
+}
+
+.hint-item summary::-webkit-details-marker {
+  display: none; /* Для старих браузерів */
+}
+
+/* Кастомний трикутник */
+.hint-item summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 10px;
+  color: #4facfe;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+/* Поворот трикутника при відкритті */
+.hint-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.hint-item summary:hover {
+  background-color: #4facfe;
+  color: #ffffff;
+}
+
+.hint-item summary:hover::before {
+  color: #ffffff;
+}
+
+/* Вміст підказки */
+.hint-item p {
+  padding: 15px;
+  margin: 0;
+  border-top: 1px solid #3a3a48;
+  font-size: 16px;
+  color: #dcdcdc;
+}
+/* --- Стилі для клікабельного інлайн-коду --- */
+code.inline-copy {
+  background-color: #2b2b36;
+  color: #ffaa00; /* Яскравий помаранчевий колір для синтаксису */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border-radius: 6px;
+  border: 1px solid #3a3a48;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-block; /* Щоб рамка не ламалася */
+}
+
+code.inline-copy:hover {
+  background-color: #3a3a48;
+  border-color: #4facfe;
+  color: #4facfe;
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);
+}
+
+/* Стан після успішного копіювання */
+code.inline-copy.copied {
+  background-color: #00ff88;
+  color: #1e1e24;
+  border-color: #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+}
+/* === ПІДСВІЧУВАННЯ СИНТАКСИСУ (Roblox Studio) === */
+#lua-code {
+  color: #e2e2ec; /* Базовий колір тексту (наприклад, для wall) */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lua-keyword {
+  color: #f86d7c;
+} /* Червоно-кораловий (local, function) */
+.lua-object {
+  color: #82aaff;
+} /* Синій (script.Parent) */
+.lua-func {
+  color: #fdce00;
+} /* Синій (wait, print) */
+
+.lua-bool {
+  color: #ffc777;
+  font-weight: bold;
+} /* Жовтий жирний (false, true) */
+
+.lua-prop {
+  color: #82aaff;
+} /* Синій (BrickColor, Size) */
+.lua-num {
+  color: #ffc777;
+} /* Жовтий (5, 2, 4, 1, 20) */
+
+.lua-string {
+  color: #c3e88d;
+} /* Зелений ("Grey", "Міст...") */
+.lua-vec {
+  color: #c3e88d;
+  font-weight: bold;
+} /* Велика Vector3.new */
+
+/* ==========================================================================
+   СТИЛІ ДЛЯ ДЗ №8 (Код, Інтерактив, Підказки)
+   ========================================================================== */
+
+/* --- Головний контейнер для коду (Термінал-стиль) --- */
+.code-placeholder {
+  position: relative;
+  background-color: #18181f; /* Глибокий темний фон */
+  padding: 24px 20px 24px 24px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-left: 6px solid #4facfe; /* Яскравий синій акцент зліва */
+}
+
+.code-placeholder pre {
+  margin: 0;
+  overflow-x: auto; /* Додає скрол, якщо код задовгий */
+}
+
+/* --- Кнопка копіювання головного коду --- */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #dcdcdc;
+  border: 1px solid #4a4a5a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: #7a7a8a;
+}
+
+.copy-btn.success {
+  background-color: #00ff88;
+  color: #18181f;
+  border-color: #00ff88;
+  font-weight: bold;
+}
+
+.hint-item {
+  margin-bottom: 10px;
+  background-color: #1e1e24;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #3a3a48;
+}
+
+.hint-item summary {
+  padding: 12px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #dcdcdc;
+  background-color: #3a3a48;
+  list-style: none; /* Прибираємо трикутник */
+  transition: background-color 0.2s;
+}
+
+.hint-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Кастомний трикутник ▶ */
+.hint-item summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 10px;
+  color: #4facfe;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+/* Поворот трикутника при відкритті */
+.hint-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.hint-item summary:hover {
+  background-color: #4facfe;
+  color: #ffffff;
+}
+
+.hint-item p {
+  padding: 15px;
+  margin: 0;
+  border-top: 1px solid #3a3a48;
+  font-size: 16px;
+  color: #dcdcdc;
+}
+/* .code-placeholder и related styles уже определены выше */
+
+.hint-item {
+  margin-bottom: 10px;
+  background-color: #1e1e24;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #3a3a48;
+}
+
+.hint-item summary {
+  padding: 12px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #dcdcdc;
+  background-color: #3a3a48;
+  list-style: none; /* Прибираємо трикутник */
+  transition: background-color 0.2s;
+}
+
+.hint-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Кастомний трикутник ▶ */
+.hint-item summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 10px;
+  color: #4facfe;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+/* Поворот трикутника при відкритті */
+.hint-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.hint-item summary:hover {
+  background-color: #4facfe;
+  color: #ffffff;
+}
+
+.hint-item p {
+  padding: 15px;
+  margin: 0;
+  border-top: 1px solid #3a3a48;
+  font-size: 16px;
+  color: #dcdcdc;
+}
+
+/* --- Розподільник секцій (hr.divider) --- */
+.divider {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #3a3a48, transparent);
+  margin: 40px 0;
+}
+
+.hint-item {
+  margin-bottom: 10px;
+  background-color: #1e1e24;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #3a3a48;
+}
+
+.hint-item summary {
+  padding: 12px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #dcdcdc;
+  background-color: #3a3a48;
+  list-style: none; /* Прибираємо трикутник */
+  transition: background-color 0.2s;
+}
+
+.hint-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Кастомний трикутник ▶ */
+.hint-item summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 10px;
+  color: #4facfe;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+/* Поворот трикутника при відкритті */
+.hint-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.hint-item summary:hover {
+  background-color: #4facfe;
+  color: #ffffff;
+}
+
+.hint-item p {
+  padding: 15px;
+  margin: 0;
+  border-top: 1px solid #3a3a48;
+  font-size: 16px;
+  color: #dcdcdc;
+}
+
+/* ==========================================================================
+   ПІДСВІЧУВАННЯ СИНТАКСИСУ (Reusable Classes)
+   Додай це у свій style.css ОДИН РАЗ, щоб код на сайті мав кольори
+   ========================================================================== */
+
+/* Кольори підібрані максимально близько до Roblox Studio (темна тема) */
+
+/* --- Спеціальний стиль для виноски у ДЗ №8 --- */
+.info-box.footnote-box {
+  margin-top: 20px;
+  background-color: rgba(79, 172, 254, 0.1); /* Дуже прозорий синій фонок */
+  border: 2px dashed #4facfe; /* Пунктирна синя рамка */
+  color: #4facfe; /* Синій колір тексту */
+  font-style: italic; /* Курсив для виділення */
+}
+
+/* ==========================================================================
+   ВІДЕО З YOUTUBE
+   ========================================================================== */
+.video-section {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.youtube-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Зберігає ідеальну пропорцію 16:9 */
+  height: 0;
+  border-radius: var(--border-radius, 12px);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #000; /* Чорний фон, поки відео вантажиться */
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+} /*
+.main-content:has(.lock-overlay) {
+  overflow: hidden;  <--- САМЕ ЦЕ ВИМИКАЄ ПРОКРУТКУ 
+}*/
+/* === БЛОК МОТИВАЦІЇ / УСКЛАДНЕННЯ === */
+.motivation-panel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(239, 68, 68, 0.1); /* Напівпрозорий червоний фон */
+  border: 1px dashed #ef4444; /* Червона пунктирна рамка */
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.motivation-icon {
+  font-size: 40px;
+  flex-shrink: 0; /* Забороняє іконці стискатися, якщо тексту багато */
+}
+
+.motivation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.motivation-content h4 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* Колір #ef4444 вже вказаний у тебе в HTML (inline), тому тут його можна опустити або продублювати */
+}
+
+.motivation-content p {
+  margin: 0;
+  color: #94a3b8; /* Світло-сірий колір для додаткового тексту */
+  font-size: 15px;
+  line-height: 1.6;
+}
+/* === СТИЛІ ДЛЯ ПРО-МІСІЇ === */
+.pro-mission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.pro-card-item {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.pro-card-problem {
+  background-color: rgba(239, 68, 68, 0.15); /* Червонуватий фон */
+  border-left: 4px solid #ef4444;
+}
+
+.pro-card-solution {
+  background-color: rgba(56, 189, 248, 0.15); /* Блакитний фон */
+  border-left: 4px solid #38bdf8;
+}
+
+.pro-steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.pro-step {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 15px;
+  border-radius: 8px;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pro-step-number {
+  background-color: #ef4444;
+  color: white;
+  font-weight: 900;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Квадратні з округленими кутами виглядають більш "геймерськи" */
+  flex-shrink: 0;
+}
+
+.pro-keyword {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  color: #ffc777; /* Жовтий колір для коду */
+  font-weight: bold;
+}
+/* ==========================================================================
+   АДАПТИВНА ВЕРСТКА (MOBILE & TABLET)
+   ========================================================================== */
+
+/* Планшети (до 1024px) */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px; /* Звужуємо панель */
+  }
+
+  .content-box {
+    padding: 25px;
+    margin: 0 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+/* Смартфони та невеликі планшети (до 768px) */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Панель тепер зверху, а не збоку */
+    height: auto;
+    overflow: visible;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 4px solid #3a3a48;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    padding: 10px;
+  }
+
+  .task-list {
+    flex-direction: row; /* Робимо горизонтальний список завдань */
+    overflow-x: auto; /* Дозволяємо гортати завдання вбік */
+    padding: 10px;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .task-link {
+    white-space: nowrap; /* Текст не переноситься */
+    padding: 8px 15px;
+  }
+
+  .main-content {
+    padding: 15px;
+    background-size: 15px 15px; /* Менша сітка для мобілок */
+  }
+
+  .content-box {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .content-box h1 {
+    font-size: 24px;
+  }
+
+  /* Слайдер */
+  .slider-container {
+    height: 180px; /* Менша висота для екрана телефону */
+  }
+
+  /* Блоки інформації */
+  .info-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .tg-icon,
+  .icon,
+  .warning-box .icon {
+    font-size: 30px;
+  }
+
+  /* Гра (iframe) */
+  .iframe-wrapper {
+    height: 350px; /* Оптимально для вертикального екрана */
+  }
+
+  /* Картки Про-місії */
+  .pro-mission-cards {
+    grid-template-columns: 1fr; /* В одну колонку */
+  }
+}
+
+/* Дуже маленькі екрани (до 480px) */
+@media (max-width: 480px) {
+  .content-box h1 {
+    font-size: 20px;
+  }
+
+  .task-steps {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+
+  .slider-container {
+    height: 150px;
+  }
+
+  .pro-step {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* === СТИЛІ ДЛЯ ФІНАЛЬНОГО ВИПРОБУВАННЯ (ЗАВДАННЯ 16) === */
+.final-exam-card {
+  background: linear-gradient(
+    135deg,
+    rgba(251, 191, 36, 0.05) 0%,
+    rgba(245, 158, 11, 0.15) 100%
+  );
+  border: 2px dashed rgba(251, 191, 36, 0.5);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.final-exam-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+  border-color: rgba(251, 191, 36, 0.9);
+}
+
+.final-exam-title {
+  color: #fbbf24;
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Додаємо світіння для іконки */
+.final-exam-title i {
+  font-size: 24px;
+  filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.6));
+}
+
+.final-exam-text {
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0; /* Відступ вже заданий у самій картці (padding) */
+}
