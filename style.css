@@ -466,13 +466,13 @@ body {
 /* Блок Telegram (синій акцент) */
 .telegram-box {
   background-color: rgba(0, 136, 204, 0.1);
-  border: 2px solid #0088cc;
+  border: 2px solid #cc0036;
   color: #e0f2fe;
   margin-top: 30px;
 }
 
 .telegram-box strong {
-  color: #00aaff;
+  color: #ff0059;
   font-size: 20px;
 }
 
@@ -578,12 +578,13 @@ body {
 }
 
 .slider-container {
-  width: 90%; /* Робимо широким, як дві старі картинки разом */
-  height: 220px; /* Залишаємо висоту майже незмінною */
+  width: 90%;
+  max-width: 400px; /* Обмежуємо максимальний розмір, щоб квадрат не був гігантським на ПК */
+  aspect-ratio: 1 / 1; /* Саме ця команда робить контейнер ідеальним квадратом */
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  background-color: #1a1a20; /* Темний фон під картинкою */
+  background-color: #1a1a20;
   border: 3px solid transparent;
   transition:
     border-color 0.3s ease,
@@ -1188,8 +1189,8 @@ code.inline-copy.copied {
 .info-box.footnote-box {
   margin-top: 20px;
   background-color: rgba(79, 172, 254, 0.1); /* Дуже прозорий синій фонок */
-  border: 2px dashed #4facfe; /* Пунктирна синя рамка */
-  color: #4facfe; /* Синій колір тексту */
+  border: 2px dashed #fe4f6c; /* Пунктирна синя рамка */
+  color: #fe4f55; /* Синій колір тексту */
   font-style: italic; /* Курсив для виділення */
 }
 
