@@ -3,135 +3,191 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roblox ДЗ - Завдання 2</title>
+    <title>Roblox 2.0 - Завдання 2</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body>
+  <body class="dark-theme">
     <div class="app-container">
       <aside class="sidebar">
         <div class="logo">
-          <h2>🎮 Roblox ДЗ</h2>
+          <h2>🛠️ Roblox 2.0</h2>
         </div>
         <nav class="task-list">
-          <a href="index.html" class="task-link">Start page</a>
-          <a href="hw1.html" class="task-link">Завдання 1</a>
-          <a href="hw2.html" class="task-link active">Завдання 2</a>
-          <a href="hw3.html" class="task-link">Завдання 3 🔒</a>
-          <a href="hw4.html" class="task-link">Завдання 4 🔒</a>
-          <a href="hw5.html" class="task-link">Завдання 5 🔒</a>
-          <a href="hw6.html" class="task-link">Завдання 6 🔒</a>
-          <a href="hw7.html" class="task-link">Завдання 7 🔒</a>
-
-          <a href="hw8.html" class="task-link">Завдання 8 🔒</a>
-          <a href="hw9.html" class="task-link">Завдання 9 🔒</a>
-          <a href="hw10.html" class="task-link">Завдання 10 🔒</a>
-          <a href="hw11.html" class="task-link">Завдання 11 🔒</a>
-          <a href="hw12.html" class="task-link">Завдання 12 🔒</a>
-          <a href="hw13.html" class="task-link">Завдання 13 🔒</a>
-          <a href="hw14.html" class="task-link">Завдання 14 🔒</a>
-          <a href="hw15.html" class="task-link">Завдання 15 🔒</a>
-          <a href="hw16.html" class="task-link">Завдання 16 🔒</a>
+          <a href="hw1.html" class="task-link">1. Основи Tools</a>
+          <a href="hw2.html" class="task-link active">2. Кола (Функції)</a>
+          <a href="hw3.html" class="task-link locked">3. Ліхтарик 🔒</a>
         </nav>
       </aside>
 
       <main class="main-content">
         <div class="content-box">
-          <h1>Завдання 2: Міст із пастками 🌉</h1>
-
-          <p>
-            Привіт! Готовий до нових випробувань? Сьогодні ми навчимося
-            створювати хитрощі та справжні пастки для гравців на твоєму рівні.
-          </p>
-
-          <h3 class="task-title">🛠 Що потрібно зробити:</h3>
-          <ul class="task-steps">
-            <li>
-              <strong>Створи міст за прикладом.</strong> Використовуй звичайні
-              блоки (Part), щоб побудувати основу, бортики та декоративні
-              ліхтарі.
-            </li>
-            <li>
-              <strong>Налаштуй справжні пастки:</strong> Зроби так, щоб гравець
-              провалювався через виділені блоки на прикладі. Для цього виділи
-              деталь, знайди у вікні <em>Properties</em> (Властивості) галочку
-              <strong>CanCollide</strong> і <strong>ВИМКНИ</strong> її.
-            </li>
-            <li>
-              <strong>Створи обманки (Ілюзії):</strong> Зроби так, щоб деякі
-              блоки виглядали як дірки, але по них можна було безпечно ходити.
-              Для цього знайди параметр
-              <strong>Transparency</strong> (Прозорість) і зроби його рівним 1
-              (блок стане невидимим). Головне — для цих блоків
-              <strong>НЕ вимикай</strong> CanCollide. Гравці будуть думати, що
-              там прірва, а насправді — невидима підлога.
-            </li>
-          </ul>
-
-          <div class="slider-wrapper">
-            <div class="slider-container">
-              <img src="img/6.png" alt="Приклад мосту" class="slide active" />
-            </div>
-          </div>
-
-          <div class="sticker-box">
-            <div class="character-sticker">
-              <div class="char-hair"></div>
-              <div class="char-face">🧐</div>
-              <div class="char-body"></div>
-            </div>
-            <div class="sticker-text">
-              <strong>НЕ ЗАБУДЬ ПРО ЯКІР! ⚓</strong><br />
-              Якщо твій міст падає у прірву відразу після запуску гри — ти забув
-              виділити всі деталі та натиснути <em>Anchor</em> (Якір). Усі блоки
-              в повітрі мають бути закріплені!
-            </div>
-          </div>
-
-          <div class="interactive-task">
-            <h3>🎮 Перевір себе: Знайди пару!</h3>
-            <p>
-              Окрім побудови в Roblox Studio, на тебе чекає ще одне завдання!
-              Зіграй у цю міні-гру, щоб закріпити знання про властивості блоків
-              (Properties).
-              <strong
-                >Коли успішно пройдеш її, обов'язково зроби скріншот свого
-                результату та скинь його у наш Telegram-чат!</strong
-              >
+          <div class="welcome-banner course-banner">
+            <h1 class="welcome-title">Завдання 2: Бустери та Суперсили ⚡🧪</h1>
+            <p class="intro-text">
+              Твій предмет уже виглядає круто, але тепер час зробити його
+              функціональним. У цьому завданні ми використаємо подію Activated,
+              щоб при кліку мишкою інструмент впливав на параметри персонажа:
+              рятував життя, давав суперстрибок або навіть спрацьовував як хитра
+              пастка.
             </p>
-
-            <div class="iframe-wrapper">
-              <iframe
-                style="max-width: 100%"
-                src="https://wordwall.net/uk/embed/eaa82c24f95a410fa7be0f07432468ce?themeId=66&templateId=3&fontStackId=0"
-                width="500"
-                height="380"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
           </div>
 
-          <div class="info-box telegram-box">
+          <section class="task-section">
+            <div class="task-header">
+              <h2 class="task-title">
+                💡 Вибери функцію для свого інструмента:
+              </h2>
+            </div>
+
+            <div class="pro-mission-cards">
+              <div class="pro-card-item pro-card-solution theme-red">
+                <strong
+                  ><i class="fa-solid fa-bolt"></i> Енергетик
+                  (JumpPower)</strong
+                ><br />
+                Дає здатність перестрибувати великі перешкоди. Збільшує силу
+                стрибка гравця до 100 або 150.
+              </div>
+
+              <div class="pro-card-item pro-card-solution theme-orange">
+                <strong
+                  ><i class="fa-solid fa-heart-pulse"></i> Аптечка
+                  (Health)</strong
+                ><br />
+                Рятує в небезпечних ситуаціях. Відновлює здоров'я гравця до
+                максимуму (humanoid.Health = 100).
+              </div>
+
+              <div class="pro-card-item pro-card-solution theme-yellow">
+                <strong
+                  ><i class="fa-solid fa-skull-crossbones"></i> Отруйне Зілля
+                  (Damage)</strong
+                ><br />
+                Предмет-пастка! Виглядає як звичайний напій, але при
+                використанні віднімає здоров'я або робить його рівним 0.
+              </div>
+            </div>
+
+            <h4 class="step-section-title">
+              <i class="fa-solid fa-code"></i> Алгоритм програмування Tool:
+            </h4>
+
+            <div class="pro-steps-container">
+              <div class="pro-step">
+                <div class="pro-step-number bg-red">1</div>
+                <div class="step-text">
+                  <strong>Скрипт:</strong> Додай звичайний
+                  <span class="pro-keyword">Script</span> всередину свого Tool.
+                  Створи змінну для інструмента:
+                  <code>local tool = script.Parent</code>.
+                </div>
+              </div>
+              <div class="pro-step">
+                <div class="pro-step-number bg-red">2</div>
+                <div class="step-text">
+                  <strong>Подія кліку:</strong> Використай подію
+                  <span class="pro-keyword">Activated</span>. Вона спрацьовує,
+                  коли гравець тримає предмет у руках і натискає ліву кнопку
+                  миші. Відкрий функцію <code>Connect(function()</code>.
+                </div>
+              </div>
+              <div class="pro-step">
+                <div class="pro-step-number bg-red">3</div>
+                <div class="step-text">
+                  <strong>Пошук гравця:</strong> Всередині функції знайди
+                  персонажа, який тримає предмет (<code>tool.Parent</code>), та
+                  його <span class="pro-keyword">Humanoid</span> через команду
+                  FindFirstChild.
+                </div>
+              </div>
+              <div class="pro-step">
+                <div class="pro-step-number bg-dark-red">4</div>
+                <div class="step-text">
+                  <strong>Суперсила:</strong> Зміни потрібну властивість
+                  Гуманоїда. Наприклад,
+                  <code>humanoid.JumpPower = 100</code> або
+                  <code>humanoid.Health = 100</code>.
+                </div>
+              </div>
+            </div>
+
+            <div class="code-placeholder no-copy" style="margin-bottom: 25px">
+              <pre><code style="color: #f3f4f6; font-family: monospace;">local tool = script.Parent
+
+tool.Activated:Connect(function()
+    local character = tool.Parent
+    local humanoid = character:FindFirstChild("Humanoid")
+    
+    if humanoid then
+        -- Зміни властивість нижче (JumpPower або Health)
+        humanoid.JumpPower = 100 
+    end
+end)</code></pre>
+            </div>
+
+            <div class="info-box warning-box">
+              <div class="info-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <div class="info-text">
+                <strong>Увага (Часта помилка):</strong> Перевіряй регістр літер!
+                Властивості пишуться з великої літери посередині:
+                <span class="pro-keyword">WalkSpeed</span>,
+                <span class="pro-keyword">JumpPower</span>,
+                <span class="pro-keyword">Health</span>. Якщо напишеш з малої,
+                скрипт видасть помилку в Output.
+              </div>
+            </div>
+          </section>
+
+          <hr class="glow-divider" />
+
+          <section class="interactive-section">
+            <div class="interactive-task quiz-task">
+              <h3 class="quiz-title">🎯 Перевір себе: Анатомія Гуманоїда</h3>
+              <p class="quiz-desc">
+                Щоб керувати здібностями гравця, треба чітко знати властивості
+                його Гуманоїда. З'єднай команди та терміни з їхнім правильним
+                значенням.
+              </p>
+
+              <div class="iframe-wrapper">
+                <iframe
+                  style="max-width: 100%"
+                  src="https://wordwall.net/uk/embed/afaf69e9341846bc9b135b20107b73cd?themeId=49&templateId=3&fontStackId=0"
+                  width="500"
+                  height="380"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </section>
+
+          <div class="info-box telegram-box submit-box">
             <div class="tg-icon">📲</div>
-            <div>
-              <strong>Як здати домашнє завдання:</strong><br />
-              Коли все зробиш, обов'язково
-              <b>зроби два скріншоти (або фото екрана)</b>: <br />
-
-              📸 Фото твого <b>готового моста</b> з пастками.<br />
-
-              🎮 Фото <b>пройденої міні-гри</b> .
-              <br />
-
-              Відправ обидві фотографії у наш спільний чат в Telegram.
+            <div class="step-text">
+              <strong>Як здати завдання:</strong><br />
+              1️⃣ Зайди в гру та візьми свій предмет у руки.<br />
+              2️⃣ Натисни ліву кнопку миші.<br />
+              3️⃣ Запиши коротке відео, де видно, як персонаж починає швидко
+              бігати, високо стрибати або лікується, та відправ у наш
+              Telegram-чат.
             </div>
           </div>
         </div>
       </main>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
